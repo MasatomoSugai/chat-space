@@ -22,3 +22,72 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## membersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+## usersテーブル
+
+|Column|Type|Oprions|
+|------|----|-------|
+|id|integer|null: false|
+|name|string|null: false|
+|email|text|null: false|
+
+### Association
+- has_many :messages
+- has_many :groups, through: :members
+
+
+## groupsテーブル
+|Colunm|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|name|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
+
+
+### Association
+- has_many :users, through: :members
+- has_many :messages
+
+
+## messagesテーブル
+
+|Colunm|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|message|text|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|photo_id|integer|foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+-
+
+## photosテーブル
+
+|Colunm|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|photo|data|
+|user_id|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :message
+
+
+
