@@ -38,8 +38,7 @@ Things you may want to cover:
 
 |Column|Type|Oprions|
 |------|----|-------|
-|id|integer|null: false|
-|name|string|null: false|
+|name|string|null: false, add_index|
 |email|text|null: false|
 
 ### Association
@@ -50,27 +49,21 @@ Things you may want to cover:
 ## groupsテーブル
 |Colunm|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
-
 
 ### Association
 - has_many :users, through: :members
 - has_many :messages
-_ belongs_to :members
+_ has_many :members
 
 ## messagesテーブル
 
 |Colunm|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |message|text|
-|image|text|
+|image|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|photo_id|integer|foreign_key: true|
 
 ### Association
 - belongs_to :user
