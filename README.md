@@ -67,6 +67,7 @@ Things you may want to cover:
 |------|----|-------|
 |id|integer|null: false|
 |message|text|
+|image|text|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |photo_id|integer|foreign_key: true|
@@ -75,19 +76,5 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :group
 -
-
-## photosテーブル
-
-|Colunm|Type|Options|
-|------|----|-------|
-|id|integer|null: false|
-|photo|data|
-|user_id|integer|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :message
-
 
 
