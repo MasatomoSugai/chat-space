@@ -1,11 +1,11 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
     %title ChatSpace
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    %script.fa.fa-facebook{:src => "https://kit.fontawesome.com/de9acd04a4.js"}
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
+    %script.fa.fa-facebook{src: "https://kit.fontawesome.com/de9acd04a4.js"}
+    = javascript_include_tag 'application', 'data-turbolinks-track': true
     = csrf_meta_tags
   %body
     = render partial: 'layouts/flash'
