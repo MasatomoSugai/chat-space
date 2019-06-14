@@ -21,8 +21,9 @@ a {
   height: 100%;
   min-height: 264px;
   width: 300px;
-  float: left;
+  // float: left;
   position: fixed;
+  top: 0;
 
   .side-header {
     background-color: #253141;
@@ -74,7 +75,8 @@ a {
   height: 100%;
   margin-left: 300px;
   width: calc(100vw - 300px);
-  float: left;
+  position: relative;
+
 
   .main-header {
     height: 100px;
@@ -82,6 +84,12 @@ a {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #eee;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+
+
 
     &__left-box {
       margin-top: 35px;
@@ -103,14 +111,20 @@ a {
       margin-top: 30px;
       border: 1px solid $chatspace-blue;
       position:absolute;
-      right: 40px;
+      right: 380px;
       color: $chatspace-blue;
+      margin-right: 40px;
+      z-index: 2;
+
+
     }
   }
   .messages {
     height: calc(100vh - 190px);
     padding: 46px 40px;
     background-color: #fafafa;
+    margin-top: 100px;
+  
     .message {
       padding-bottom: 40px;
       &__upper-info {
@@ -132,7 +146,6 @@ a {
         font-size: 14px;
         margin-bottom: 10px;
       }
-
     }
   }
 
@@ -140,7 +153,9 @@ a {
     height: 50px;
     padding: 20px 40px;
     background-color: #ddd;
-
+    position: fixed;
+    bottom: 0;
+    width: calc(100vw - 380px);
     .new_message {
       display: flex;
       .input-box {
@@ -148,10 +163,11 @@ a {
         width: 100%;
         &__text {
           height: 50px;
-          width: 96%;
+          width: 100%;
           padding: 0 10px 0 10px;
           color: #434a54;
           border-style: none;
+          box-sizing: border-box;
         }
         &__image {
           font-size: 1.3rem;
