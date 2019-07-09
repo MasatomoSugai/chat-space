@@ -46,8 +46,7 @@ $(function(){
       console.log(message)
       var html = buildMessage(message, imageHTML);
       $('.messages').append(html)
-      $('.new_message__text').val('')
-      $('.hidden').val('')
+      $('#new_message')[0].reset()
       $('.messages').animate({scrollTop:$('.messages')[0].scrollHeight});
       $('.submit-btn').removeAttr('disabled');
     })
