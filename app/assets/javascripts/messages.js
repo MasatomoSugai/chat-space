@@ -43,7 +43,6 @@ $(function(){
     })
 
     .done(function(message, imageHTML){
-      console.log(message)
       var html = buildMessage(message, imageHTML);
       $('.messages').append(html)
       $('#new_message')[0].reset()
