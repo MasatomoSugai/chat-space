@@ -54,8 +54,6 @@ a {
       padding:0 20px;
       margin-top: 30px;
       border: 1px solid $chatspace-blue;
-      // position:absolute;
-      // right: 380px;
       color: $chatspace-blue;
       margin-right: 40px;
 
@@ -94,11 +92,6 @@ a {
           height: 150px;
         }
       }
-      // &__image {
-      //   width: 200px;
-      //   height: 150px;
-
-      // }
     }
   }
 
@@ -106,8 +99,6 @@ a {
     height: 90px;
     padding: 20px 40px;
     background-color: #ddd;
-    // position: fixed;
-    // bottom: 0;
     width: calc(100vw - 300px);
     .new_message {
       display: flex;
