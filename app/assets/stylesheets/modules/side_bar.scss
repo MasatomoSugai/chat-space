@@ -33,7 +33,6 @@ a {
     display: flex;
     align-items: center;
     padding: 0 20px;
-
     &__box {
       width: 100%;
       color: $chatside-color;
@@ -57,6 +56,7 @@ a {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 20px 20px 0;
+    overflow: scroll;
 
     .group {
       margin-bottom: 40px;
