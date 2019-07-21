@@ -25,7 +25,6 @@ $(function(){
     var formData = new FormData(this);
     var url = $(this).attr('action');
   
-
     var vallText = $('.new_message__text').val();
     var vallImage = $('.hidden').val();
     if(!vallText && !vallImage){
