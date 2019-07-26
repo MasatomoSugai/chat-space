@@ -51,11 +51,6 @@ function changeUser(userName, userId){
           var userName = $(this).data('userName');
           var userId = $(this).data('userId');
           changeUser(userName, userId);
-          
-        })
-        $(document).on("click", ".chat-group-user__btn--remove", function(){
-          $(this).parent().remove();
-          
         })
     })
 
@@ -63,5 +58,10 @@ function changeUser(userName, userId){
       alert('ユーザー検索に失敗しました');
     })
   });
-
+  $(document).on("click", ".chat-group-user__btn--remove", function(){
+    $(this).parent().remove();
+    
+  })
 });
+
+
