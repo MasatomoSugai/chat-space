@@ -3,7 +3,7 @@
     %p.side-header__box__user-name
       = current_user.name
     %ul.side-header__box__menu
-      %li.side-header__box__menu__new-group
+      %li.side-header__box__menu__new-group{"data-turbolinks": "false"}
         = link_to new_group_path do
           = fa_icon "edit"
       %li.side-header__box__menu__edit-user
